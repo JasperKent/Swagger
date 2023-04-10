@@ -10,7 +10,7 @@ namespace Swagger.Controllers
     {
         private readonly IReviewRepository _reviewRepository;
 
-        private bool ValidateReview (BookReview bookReview)
+        private static bool ValidateReview (BookReview bookReview)
         {
             return !string.IsNullOrWhiteSpace(bookReview.Title)
                 && bookReview.Rating >= 1
